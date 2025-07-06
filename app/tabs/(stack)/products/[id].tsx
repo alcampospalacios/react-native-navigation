@@ -7,7 +7,7 @@ const ProductDetails = () => {
   const { id } = useLocalSearchParams();
   const product = products.find((prod) => prod.id === id);
 
-  if (!product) return <Redirect href="/products" />;
+  if (!product) return <Redirect href="/" />;
 
   return (
     <View className="mt-10 px-4">

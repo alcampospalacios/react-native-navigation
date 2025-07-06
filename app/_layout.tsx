@@ -1,6 +1,7 @@
 import { useFonts } from 'expo-font';
 import { Slot, SplashScreen } from 'expo-router';
 import React, { useEffect } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import './global.css';
 
 const RootLayout = () => {
@@ -20,8 +21,13 @@ const RootLayout = () => {
   if (!fontsLoaded) {
     return null;
   }
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Slot />
+    </GestureHandlerRootView>
+  );
 
-  return <Slot />;
+  // return <Slot />;
 };
 
 export default RootLayout;
