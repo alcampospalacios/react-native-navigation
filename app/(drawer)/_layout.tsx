@@ -17,6 +17,15 @@ const DrawerLayout = () => {
       }}
     >
       <Drawer.Screen
+        name="(tabs)" // This is the name of the page and must match the url from root
+        options={{
+          headerShown: false,
+          drawerLabel: 'Inicio',
+          title: 'Inicio',
+          drawerIcon: ({ color, size }) => <FontAwesome size={size} name="home" color={color} />,
+        }}
+      />
+      <Drawer.Screen
         name="user/index" // This is the name of the page and must match the url from root
         options={{
           drawerLabel: 'Usuario',

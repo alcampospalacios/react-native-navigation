@@ -5,12 +5,13 @@ import React from 'react';
 const TabsLayout = () => {
   // tabBarShowLabel Oculta el label de los tabs
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: 'indigo', headerShown: false }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: 'indigo' }}>
       <Tabs.Screen
         name="(stack)"
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />,
+          headerShown: false,
         }}
       />
       <Tabs.Screen
